@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'young-serif';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
+:root {
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Stone-100);
+    min-height: 100dvh;
+    flex-direction: column;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    overflow: hidden;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.img-container img {
+    width: 100%;
+    display: block;
+}
+
+.card-content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2.5rem;
+}
+
+.card-title {
+    font-family: 'young-serif', 'Segoe UI';
+    font-weight: lighter;
+    font-size: clamp(2.2rem, 2.5rem, 2.8rem);
+    line-height: 1;
+}
+
+.card-description {
+    font-family: 'outfit', 'Segoe UI';
+    font-weight: 400;
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+    line-height: 1.4;
+}
+
+.prep-time {
+    background-color: var(--Rose-50);
+    font-family: 'outfit', 'Segoe UI';
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1.5rem 1rem;
+    border-radius: 7px;
+}
+
+.section-title {
+    color: var(--Rose-800);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    margin-left: .5rem;
+}
+
+.prep-list {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .5rem;
+    padding-left: 2.5rem;
+}
+
+.prep-list li::marker {
+    color: var(--Rose-800);
+
+}
+
+.prep-list li {
+    color: var(--Stone-900);
+    padding-left: 1rem;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    line-height: 1.5;
+}
+
+li span {
+    color: var(--Stone-900);
+    font-family: 'young-serif', 'Segoe UI';
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.ingredients,
+.instructions {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+
+}
+
+.ingredients-section-title,
+.instructions-section-title,
+.nutrion-section-title {
+    color: var(--Brown-800);
+    font-family: 'young-serif', 'Segoe UI';
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: lighter;
+}
+
+.ingredient-list,
+.instructions-list {
+    color: var(--Stone-900);
+    font-family: 'outfit', 'Segoe UI';
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 0 2rem;
+}
+
+.ingredient-list li,
+.instructions-list li {
+    padding-left: .5rem;
+}
+
+.ingredient-list li::marker,
+.instructions-list li::marker {
+    color: var(--Brown-800);
+}
+
+.instructions-list li::marker {
+    font-size: clamp(1.3rem, 1vw + 1.5rem, 2rem);
+    font-weight: bold;
+}
+
+.nutrition {
+    padding-bottom: 1rem;
+}
+
+.nutrition-info {
+    color: var(--Stone-900);
+    font-family: 'outfit', 'Segoe UI';
+    font-size: clamp(1.2rem, 1.6rem, 1.8rem);
+    margin: .5rem 0 1rem;
+}
+
+.nutrition-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.nutrition-label {
+    color: var(--Stone-900);
+    font-family: 'outfit', 'Segoe UI';
+    font-size: clamp(1.2rem, 1.5rem, 1.8rem);
+    text-align: center;
+}
+
+.nutrition-value {
+    color: var(--Brown-800);
+    font-family: 'outfit', 'Segoe UI';
+    font-size: clamp(1.2rem, 1.5rem, 1.7rem);
+    font-weight: 600;
+    text-align: left;
+}
+
+td {
+    padding: .5rem 0;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+.social-media {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 .5rem;
+}
+
+ion-icon {
+    font-size: 2.1rem;
+    color: var(--Rose-800);
+    border: 2px solid;
+    border-radius: 50%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    transition: all .3s ease-out;
+}
+
+ion-icon:hover {
+    color: var(--Stone-900);
+}
+
+.attribution {
+    color: var(--Stone-900);
+    font-family: serif;
+    font-size: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: .5rem;
+}
+
+.attribution a {
+    color: var(--Rose-800);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 700px;
+        margin: 2rem auto 0;
+        padding: 2rem;
+    }
+
+    .card-content {
+        padding: 0;
+    }
+
+    .attribution {
+        font-size: 1.1rem;
+    }
+}
